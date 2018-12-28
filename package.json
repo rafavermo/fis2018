@@ -1,0 +1,23 @@
+{
+  "name": "fis2018",
+  "version": "1.0.0",
+  "description": "We livin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafavermo/fis2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafavermo/fis2018/issues"
+  },
+  "homepage": "https://github.com/rafavermo/fis2018#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
