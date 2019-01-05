@@ -1,7 +1,7 @@
 export class Project {
-    name: string;
+    name: String;
     dateIni: Date;
     dateFin: Date;
-    status: boolean;
-    description: string;
+    status: String;
+    description: String;
 }
