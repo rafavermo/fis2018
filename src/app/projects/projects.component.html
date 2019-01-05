@@ -9,13 +9,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let project of projects">
-            <td>{{ project.name }}</td>
-            <td>{{ project.dateIni }}</td>
-            <td>{{ project.dateFin }}</td>
-            <td>{{ project.status }}</td>
-            <td>{{ project.description }}</td>
-            <td><button class="btn">Edit</button></td>
+        <tr>
+            <td><input class="form-control" [(ngModel)]="newProject.name"></td>
+            <td><input class="form-control" [(ngModel)]="newProject.dateIni"></td>
+            <td><input class="form-control" [(ngModel)]="newProject.dateFin"></td>
+            <td><input class="form-control" [(ngModel)]="newProject.status"></td>
+            <td><input class="form-control" [(ngModel)]="newProject.description"></td>
+            <td><button class="btn btn-primary" (click)="addProject()">Add Project</button> </td>
+        </tr>
+        <tr *ngFor="let project of projects" app-editable-project [project]="project">
         </tr>
     </tbody>
 </table>

@@ -1,0 +1,11 @@
+<td *ngIf="!editable">{{ project.name }}</td>
+<td *ngIf="!editable">{{ project.dateIni }}</td>
+<td *ngIf="!editable">{{ project.dateFin }}</td>
+<td *ngIf="!editable">{{ project.status }}</td>
+<td *ngIf="!editable">{{ project.description }}</td>
+<td *ngIf="editable"><input class="form-control" [(ngModel)]="project.name" /></td>
+<td *ngIf="editable"><input class="form-control" [(ngModel)]="project.dateIni" /></td>
+<td *ngIf="editable"><input class="form-control" [(ngModel)]="project.dateFin" /></td>
+<td *ngIf="editable"><input class="form-control" [(ngModel)]="project.status" /></td>
+<td *ngIf="editable"><input class="form-control" [(ngModel)]="project.description" /></td>
+<td><button class="btn" (click)="onEdit()">{{ editable ? 'Edit' : 'Save' }}</button></td>
