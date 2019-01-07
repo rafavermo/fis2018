@@ -13,7 +13,6 @@ COPY projects.js .
 COPY server.js .
 COPY dist dist
 
-#RUN ng build --prod
 ENV NODE_ENV=production
 
 EXPOSE 3000
