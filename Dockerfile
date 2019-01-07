@@ -1,11 +1,13 @@
 FROM node:9
 
+RUN mkdir -p /app
 WORKDIR /app
 
 COPY package.json .
 #COPY package-lock.json .
 
-RUN npm install
+RUN npm install --quiet
+
 
 COPY index.js .
 COPY server.js .

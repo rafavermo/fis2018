@@ -31,7 +31,7 @@
     "express": "^4.16.4",
     "hystrixjs": "^0.2.0",
     "jquery": "^3.3.1",
-    "mongoose": "^5.3.14",
+    "mongoose": "^5.4.2",
     "nedb": "^1.8.0",
     "pact": "^4.3.2",
     "passport": "^0.4.0",
@@ -43,6 +43,7 @@
     "request-promise-native": "^1.0.5",
     "rxjs": "^6.3.3",
     "sinon": "^6.3.5",
+    "sinon-mongoose": "^2.2.1",
     "url-join": "^4.0.0",
     "uuid": "^3.3.2",
     "zone.js": "~0.8.26"

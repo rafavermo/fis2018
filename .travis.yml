@@ -18,6 +18,7 @@ script:
   #- npm test
   # build docker images
   - docker build -t projects .
+ # - npm start
 
 deploy:
   provider: script
