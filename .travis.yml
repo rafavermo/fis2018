@@ -22,7 +22,7 @@ script:
   #- npm test
   # build docker images
   #- docker pull mongo:4
-  - docker build -t test . 
+  #- docker build -t test . 
  
 
 deploy:
