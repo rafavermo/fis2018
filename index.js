@@ -2,7 +2,7 @@ var server = require('./server');
 var mongoose = require('mongoose');
 var ApiKey = require('./apikeys');
 var port = (process.env.PORT || 3000);
-var dbUrl = (process.env.DB || 'mongodb://localhost/test');
+var dbUrl = (process.env.DB || 'mongodb://fis2018-dev:fis2018@ds153593.mlab.com:53593/heroku_r7gptmwv' || 'mongodb://localhost/test');
 
 
 console.log("Starting API server...");
