@@ -13,21 +13,17 @@ install:
   - npm install
   - npm install -g @angular/cli
 
-before_script:
-  - sleep 15
-  - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 
 script:
   - ng build --prod --aot
   #- npm test
   # build docker images
-  #- docker pull mongo:4
-  #- docker build -t test . 
+  - docker build -t fis2018-dev . 
  
 
 deploy:
   provider: script
-  skip_cleanup: true
+  #skip_cleanup: true
   script:
     # push to heroku
     heroku container:login;
