@@ -18,12 +18,12 @@ script:
   - ng build --prod --aot
   #- npm test
   # build docker images
-  - docker-compose build -t fis2018-dev . 
+  - docker-compose up --build
  
 
 deploy:
   provider: script
-  #skip_cleanup: true
+  skip_cleanup: true
   script:
     # push to heroku
     heroku container:login;
