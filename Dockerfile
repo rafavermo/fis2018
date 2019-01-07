@@ -1,4 +1,4 @@
-FROM node:9.11.2-stretch
+FROM node:10.14-stretch-slim
 
 WORKDIR /app
 
@@ -7,16 +7,14 @@ COPY package-lock.json .
 
 RUN npm install
 
-
-
 COPY index.js .
-COPY server.js .
-COPY apikeys.js .
 COPY projects.js .
+COPY apikeys.js .
+COPY server.js .
 COPY dist dist
 
 #RUN ng build --prod
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 EXPOSE 3000
 CMD npm start

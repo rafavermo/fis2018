@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var projectSchema = new mongoose.Schema({
     name: String,
@@ -7,10 +7,6 @@ var projectSchema = new mongoose.Schema({
     status: String,
     description: String
 });
-
-var Project = mongoose.model('Project', projectSchema);
-
-module.exports = Project;
 
 projectSchema.methods.cleanup = function() {
     return {
@@ -21,3 +17,7 @@ projectSchema.methods.cleanup = function() {
         description: this.description
     };
 }
+
+var Project = mongoose.model('Project', projectSchema);
+
+module.exports = Project;

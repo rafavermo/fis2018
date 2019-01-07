@@ -1,14 +1,14 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var Project = require('./projects');
 var cors = require('cors');
 var path = require('path');
+var Project = require('./projects');
 var ApiKey = require('./apikeys');
 var passport = require('passport');
 var LocalAPIKey = require('passport-localapikey-update').Strategy;
 
 const PROJECT_APP_DIR = "/dist/projects-app";
-const BASE_URL_API = "/api/v1";
+var BASE_URL_API = "/api/v1";
 
 passport.use(new LocalAPIKey(
     (apikey, done) => {
@@ -25,9 +25,10 @@ passport.use(new LocalAPIKey(
 ));
 
 var app = express();
-app.use(passport.initialize());
 app.use(bodyParser.json());
+app.use(passport.initialize());
 app.use(cors());
+
 app.use(express.static(path.join(__dirname, PROJECT_APP_DIR)));
 
 app.get("/", (req, res) => {
@@ -45,7 +46,7 @@ app.get(BASE_URL_API + "/projects",
                 res.sendStatus(500);
             } else {
                 res.send(projects.map((project) => {
-                    return project;
+                    return project.cleanup();
                 }));
             }
         });
