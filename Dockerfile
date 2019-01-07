@@ -8,9 +8,9 @@ COPY package-lock.json .
 RUN npm install
 
 COPY index.js .
-COPY server.js .
-COPY apikeys.js .
-COPY projects.js .
+#COPY server.js .
+#COPY apikeys.js .
+#COPY projects.js .
 COPY dist dist
 
 #RUN ng build --prod
