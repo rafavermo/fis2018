@@ -1,7 +1,7 @@
 sudo: required
 language: node_js
 node_js:
-  - "10"
+  - "9"
 services:
   - docker
   - mongodb
@@ -16,12 +16,12 @@ install:
   before_script:
   - sleep 15
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
-  
+
 script:
   - ng build --prod --aot
   #- npm test
   # build docker images
-  - docker pull mongo:4
+  #- docker pull mongo:4
   - docker build -t fis2018 . 
  
 
