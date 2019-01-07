@@ -21,7 +21,7 @@ script:
 
 deploy:
   provider: script
-  skip_cleanup: true
+  skip_cleanup: false
   script:
     # push to heroku
     heroku container:login;
