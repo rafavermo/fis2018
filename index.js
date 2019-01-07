@@ -2,7 +2,7 @@ var server = require('./server');
 var mongoose = require('mongoose');
 var ApiKey = require('./apikeys');
 var port = (process.env.PORT || 3000);
-var dbUrl = (process.env.DB || 'mongodb://localhost/projects');
+var dbUrl = (process.env.DB || 'mongodb://localhost/test');
 
 
 console.log("Starting API server...");
