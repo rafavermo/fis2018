@@ -1,5 +1,6 @@
-FROM node:9
+FROM node:10.15-stretch-slim
 
+RUN mkdir -p /app
 WORKDIR /app
 
 COPY package.json .
