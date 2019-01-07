@@ -1,4 +1,4 @@
-FROM node:10.14-stretch-slim
+FROM node:9
 
 WORKDIR /app
 
