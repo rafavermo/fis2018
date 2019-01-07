@@ -46,7 +46,7 @@ app.get(BASE_URL_API + "/projects",
                 res.sendStatus(500);
             } else {
                 res.send(projects.map((project) => {
-                    return project.cleanup();
+                    return project;
                 }));
             }
         });

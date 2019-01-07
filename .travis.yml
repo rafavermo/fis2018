@@ -17,7 +17,9 @@ script:
   - ng build --prod --aot
   #- npm test
   # build docker images
-  - docker build -t fis2018 .  
+  - docker pull mongo:4
+  - docker build -t fis2018 . 
+ 
 
 deploy:
   provider: script
