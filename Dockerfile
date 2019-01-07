@@ -1,12 +1,12 @@
-FROM node:9
+FROM node:9.11.2-stretch
 
-RUN mkdir -p /app
 WORKDIR /app
 
 COPY package.json .
-#COPY package-lock.json .
+COPY package-lock.json .
 
-RUN npm install --quiet
+RUN npm install
+
 
 
 COPY index.js .
@@ -16,7 +16,7 @@ COPY projects.js .
 COPY dist dist
 
 #RUN ng build --prod
-ENV NODE_ENV=production
+ENV NODE_ENV production
 
 EXPOSE 3000
 CMD npm start
