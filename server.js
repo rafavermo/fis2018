@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 
 /* Obtener todos los proyectos */
 app.get(BASE_URL_API + "/projects",
-    //passport.authenticate('localapikey', { session: false }),
+    passport.authenticate('localapikey', { session: false }),
     (req, res) => {
         console.log(Date() + " - GET /projects");
         Project.find({}, '-_id -__v', (err, projects) => {
@@ -54,7 +54,7 @@ app.get(BASE_URL_API + "/projects",
 
 /* Incluir un nuevo proyecto*/
 app.post(BASE_URL_API + "/projects",
-    //passport.authenticate('localapikey', { session: false }),
+    passport.authenticate('localapikey', { session: false }),
     (req, res) => {
         console.log(Date() + " - POST /projects");
         var project = new Project(req.body);

@@ -1,8 +1,9 @@
-FROM node:9-alpine
+FROM node:9.11.2
+
 WORKDIR /app
 
 COPY package.json .
-COPY package-lock.json .
+#COPY package-lock.json .
 
 RUN npm install
 
@@ -10,7 +11,6 @@ COPY index.js .
 COPY apikeys.js .
 COPY projects.js .
 COPY server.js .
-COPY . .
 COPY dist dist
 
 #RUN ng build --prod

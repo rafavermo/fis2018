@@ -12,11 +12,16 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
   selectedProject: Project;
   newProject: Project = {
-    name: null,
-    dateIni: null,
-    dateFin: null,
-    description: null,
-    status: null
+    id:null,
+    titulo:null,
+    descripcion:null,
+    fechaInicio:null,
+    fechaFin:null,
+    organismo:null,
+    investigadorResponsable:null,
+    investigadores:null,
+    presupuesto:null,
+    estado:null
   };
 
   constructor(private projectService: ProjectService) { }
@@ -24,11 +29,16 @@ export class ProjectsComponent implements OnInit {
   addProject() {
     this.projects.push(this.newProject);
     this.newProject = {
-      name: null,
-      description: null,
-      dateIni: null,
-      dateFin: null,
-      status: null
+      id:null,
+      titulo:null,
+      descripcion:null,
+      fechaInicio:null,
+      fechaFin:null,
+      organismo:null,
+      investigadorResponsable:null,
+      investigadores:null,
+      presupuesto:null,
+      estado:null
     }
   }
 

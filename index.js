@@ -26,3 +26,4 @@ db.once('open', function() {
             }
         }));
 });
+module.exports.db = db;

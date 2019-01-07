@@ -18,7 +18,7 @@ script:
   - ng build --prod --aot
   #- npm test
   # build docker images
-  - docker build -t fis2018-dev . 
+  - docker-compose build -t fis2018-dev . 
  
 
 deploy:

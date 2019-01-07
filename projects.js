@@ -1,20 +1,30 @@
 var mongoose = require('mongoose');
 
 var projectSchema = new mongoose.Schema({
-    name: String,
-    dateIni: Date,
-    dateFin: Date,
-    status: String,
-    description: String
+    id: String,
+    titulo: String,
+    descripcion: String,
+    fechaInicio: Date,
+    fechaFin: Date,
+    organismo: String,
+    investigadorResponsable: String,
+    investigadores: [String],
+    presupuesto: String,
+    estado: String
 });
 
 projectSchema.methods.cleanup = function() {
     return {
-        name: this.name,
-        dateIni: this.dateIni,
-        dateFin: this.dateFin,
-        status: this.status,
-        description: this.description
+        id: this.id,
+        titulo: this.titulo,
+        descripcion: this.descripcion,
+        fechaInicio: this.fechaInicio,
+        fechaFin: this.fechaFin,
+        organismo: this.organismo,
+        investigadorResponsable: this.investigadorResponsable,
+        investigadores: this.investigadores,
+        presupuesto: this.presupuesto,
+        estado: this.estado
     };
 }
 
